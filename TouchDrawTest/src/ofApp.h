@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "TouchDrawManager.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -20,10 +21,8 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    ofPolyline lineWZasWidth;    // store the width in the "z" value of the line;
-    ofPolyline line;             // no z in the width,
     
     
-    void drawPolyineThickWZ( ofPolyline & line);
-    void drawPolyineThick( ofPolyline & line, int thickness);
+        TouchDrawManager touchDrawManager;
+   
 };
