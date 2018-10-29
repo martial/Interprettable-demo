@@ -1,9 +1,7 @@
 ofxAnimatable
 ofxLibwebsockets
-ofxMask
 ofxOpenCv
 ofxOsc
-ofxPoco
-ofxSSL
+ofxMask
 ofxThreadedImageLoader
 ofxTimer

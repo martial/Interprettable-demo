@@ -1,2 +1,4 @@
 prediction/tf_files/*
 translator/node_modules/*
+Interprettable/obj/*
+TouchDrawTest/obj/*

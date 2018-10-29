@@ -13,14 +13,17 @@ recognition.onstart = function() {
 }
 
 recognition.onerror = function(event) {
-    errors.push("Started recognition");
+    errors.push("Failed recognition");
 }
 
 recognition.onend = function() {
+    console.log("onEnd");
     recognition.start();
 }
 
 recognition.onresult = function(event) {
+
+    console.log("onResult");
 
     if(event.results && event.results.length > 0 ) {
         
