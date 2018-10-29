@@ -1,0 +1,9 @@
+ofxAnimatable
+ofxLibwebsockets
+ofxMask
+ofxOpenCv
+ofxOsc
+ofxPoco
+ofxSSL
+ofxThreadedImageLoader
+ofxTimer
