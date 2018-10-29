@@ -9,8 +9,11 @@
 
 void TouchDrawManager::setup() {
     
-    
-    
+    fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGB);
+    fbo.begin();
+    ofClear(255,255,255, 0);
+    fbo.end();
+
 }
 
 void TouchDrawManager::update() {
@@ -19,12 +22,14 @@ void TouchDrawManager::update() {
 
 void TouchDrawManager::draw() {
     
+    fbo.begin();
+    ofBackground(255);
+    ofSetColor(0);
     for (int i=0; i<lines.size(); i++) {
-        
         drawPolyineThickWZ(lines[i]);
-
-        
     }
+    fbo.end();
+  
     
 }
 
@@ -103,5 +108,14 @@ void TouchDrawManager::drawPolyineThick( ofPolyline * line, int thickness){
     
     meshy.draw();
     
+    
+}
+
+void TouchDrawManager::saveToImage() {
+    
+    fbo.readToPixels(pixels);
+    pixels.setImageType(OF_IMAGE_COLOR);
+    ofSaveImage(pixels, "ouput.jpg");
+
     
 }

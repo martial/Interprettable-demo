@@ -25,10 +25,16 @@ public:
     void drawPolyineThickWZ( ofPolyline * line);
     void drawPolyineThick( ofPolyline * line, int thickness);
     
+    void saveToImage();
+    
 private:
     
     vector<ofPolyline*> lines;
     int currentLineId;
+    
+    ofFbo fbo;
+    ofPixels pixels;
+
 };
 
 #endif /* TouchDrawManager_hpp */

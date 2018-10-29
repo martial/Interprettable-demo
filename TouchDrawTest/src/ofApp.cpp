@@ -21,7 +21,12 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    touchDrawManager.clear();
+    
+    if( key == ' ')
+        touchDrawManager.clear();
+    
+    if( key == 's')
+        touchDrawManager.saveToImage();
 }
 
 //--------------------------------------------------------------
@@ -37,7 +42,6 @@ void ofApp::mouseMoved(int x, int y ){
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
     
-   // touchDrawManager.addPointToCurrent(ofPoint(x,y));
     touchDrawManager.addPointToCurrent(ofPoint(x ,y,20 + 10 * sin(ofGetElapsedTimef() * 5)));
 
 }
