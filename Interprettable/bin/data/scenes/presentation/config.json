@@ -1,0 +1,14 @@
+{
+  "images": [
+    {
+      "text": "coucou",
+      "filename": "img1.png",
+      "title": "hello"
+    },
+     {
+     "text": "coucou",
+     "filename": "img2.jpg",
+     "title": "hello"
+     }
+  ]
+}
