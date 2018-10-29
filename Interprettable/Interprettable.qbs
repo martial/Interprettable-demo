@@ -12,9 +12,23 @@ Project{
         name: { return FileInfo.baseName(sourceDirectory) }
 
         files: [
+            'src/AbstractScene.cpp',
+            'src/AbstractScene.hpp',
+            'src/DescriptionScene.cpp',
+            'src/DescriptionScene.hpp',
+            'src/IntroductionScene.cpp',
+            'src/IntroductionScene.hpp',
+            'src/PresentationScene.cpp',
+            'src/PresentationScene.hpp',
+            'src/SceneManager.cpp',
+            'src/SceneManager.hpp',
+            'src/TransitionManager.cpp',
+            'src/TransitionManager.hpp',
             'src/main.cpp',
             'src/ofApp.cpp',
             'src/ofApp.h',
+            'src/ofxImgSizeUtils.cpp',
+            'src/ofxImgSizeUtils.h',
         ]
 
         of.addons: [
@@ -25,6 +39,7 @@ Project{
             'ofxPoco',
             'ofxThreadedImageLoader',
             'ofxTimer',
+            'ofxMask',
         ]
 
         // additional flags for the project. the of module sets some

@@ -1,4 +1,6 @@
 ofxAnimatable
+ofxAssets
+ofxFontStash2
 ofxLibwebsockets
 ofxOpenCv
 ofxOsc

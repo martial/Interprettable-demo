@@ -13,6 +13,8 @@
 
 void IntroductionScene::setup() {
     mainImage.load("scenes/introduction/barcelone-V2-01.png");
+    
+
 }
 
 void IntroductionScene::prepass() {
