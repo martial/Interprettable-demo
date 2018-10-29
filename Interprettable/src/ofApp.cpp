@@ -7,6 +7,8 @@ void ofApp::setup(){
     ofSetCircleResolution(128);
     sceneManager.setup();
     
+    translationSocket.setup();
+    
 }
 
 //--------------------------------------------------------------

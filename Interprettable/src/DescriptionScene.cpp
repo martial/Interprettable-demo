@@ -14,6 +14,7 @@ void DescriptionScene::setup() {
     ofFile file("scenes/presentation/config.json");
     
     if(file.exists()){
+        
         file >> configJson;
     
         for(int i=0; i< configJson["images"].size(); i++) {

@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include "SceneManager.hpp"
+#include "TranslationSocket.hpp"
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -21,6 +23,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-        SceneManager sceneManager;
-    
+        SceneManager        sceneManager;
+        TranslationSocket   translationSocket;
 };
