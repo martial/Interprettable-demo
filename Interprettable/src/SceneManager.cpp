@@ -11,6 +11,11 @@
 
 void SceneManager::setup() {
     
+    fonts.setup(false);
+    fonts.addFont("CALVERTMTSTD", "assets/fonts/CALVERTMTSTD.ttf");
+    
+
+    
     scenes.push_back(AbstractScenePtr(new IntroductionScene()));
     scenes.push_back(AbstractScenePtr(new DescriptionScene()));
 

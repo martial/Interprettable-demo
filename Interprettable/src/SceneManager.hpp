@@ -10,7 +10,7 @@
 
 #include "ofMain.h"
 #include "AbstractScene.hpp"
-
+#include "ofxFontStash2.h"
 
 typedef shared_ptr<AbstractScene> AbstractScenePtr;
 class SceneManager {
@@ -36,6 +36,8 @@ public:
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
     void mouseReleased(int x, int y, int button);
+
+    ofxFontStash2::Fonts fonts;
 
     
 private:

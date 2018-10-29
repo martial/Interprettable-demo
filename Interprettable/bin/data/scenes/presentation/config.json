@@ -1,7 +1,7 @@
 {
   "images": [
     {
-      "text": "coucou",
+      "text": "ofxFontStash2 allows you to draw text. It can draw individual lines of text, or longer texts constrained to a column (to create paragraph, automatically flowing the text for you).\n\nIt offers text alignment (left, center, right).",
       "filename": "img1.png",
       "title": "hello"
     },

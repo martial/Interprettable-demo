@@ -1,9 +1,9 @@
 ofxAnimatable
+ofxAssets
+ofxFontStash2
 ofxLibwebsockets
 ofxMask
 ofxOpenCv
 ofxOsc
-ofxPoco
-ofxSSL
 ofxThreadedImageLoader
 ofxTimer
