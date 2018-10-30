@@ -27,6 +27,9 @@ public:
     
     void setup();
     
+    void addFakeContent();
+
+    
     void onConnect( ofxLibwebsockets::Event& args );
     void onOpen( ofxLibwebsockets::Event& args );
     void onClose( ofxLibwebsockets::Event& args );
@@ -37,6 +40,8 @@ public:
     void parseTranslation( ofxLibwebsockets::Event& args);
     translated * getTranslatedForID(string uniqueID);
 
+    vector<translated> translations;
+
     
 private:
     
@@ -44,9 +49,9 @@ private:
     ofxLibwebsockets::Server server;
     bool bSetup;
     vector<string> messages;
-    vector<translated> translations;
     int translationFontSize;
     
+    bool bVerbose;
 };
 
 #endif /* TranslationSocket_hpp */

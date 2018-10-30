@@ -9,6 +9,10 @@
 
 void TranslationSocket::setup() {
     
+    bVerbose = false;
+    
+    addFakeContent();
+    
     ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
     options.port = 9092;
     options.bUseSSL = false; // you'll have to manually accept this self-signed cert if 'true'!
@@ -16,6 +20,7 @@ void TranslationSocket::setup() {
     bSetup = server.setup( options );
     server.addListener(this);
     
+    // launch browser if needed
     string url = "http";
     if ( server.usingSSL() ){
         url += "s";
@@ -25,27 +30,46 @@ void TranslationSocket::setup() {
     
 }
 
+void TranslationSocket::addFakeContent() {
+    
+    for(int i=0; i<10; i++) {
+        
+        translated t;
+        t.trans = "This is a super translation I love it ouh yeah";
+        t.raw = "Et la on est supposés mettre du texte original mais bon ca nous donne une idée deja";
+
+        translations.push_back(t);
+        
+    }
+    
+}
+
+
 //--------------------------------------------------------------
 void TranslationSocket::onConnect( ofxLibwebsockets::Event& args ){
-    cout<<"on connected"<<endl;
+    if(bVerbose)
+        cout<<"on connected"<<endl;
 }
 
 //--------------------------------------------------------------
 void TranslationSocket::onOpen( ofxLibwebsockets::Event& args ){
-    cout<<"new connection open"<<endl;
+    if(bVerbose)
+        cout<<"new connection open"<<endl;
     //sendScenariosToSocket();
     // messages.push_back("New connection from " + args.conn.getClientIP() + ", " + args.conn.getClientName() );
 }
 
 //--------------------------------------------------------------
 void TranslationSocket::onClose( ofxLibwebsockets::Event& args ){
-    cout<<"on close"<<endl;
+    if(bVerbose)
+        cout<<"on close"<<endl;
     //messages.push_back("Connection closed");
 }
 
 //--------------------------------------------------------------
 void TranslationSocket::onIdle( ofxLibwebsockets::Event& args ){
-    cout<<"on idle"<<endl;
+    if(bVerbose)
+        cout<<"on idle"<<endl;
 }
 
 //--------------------------------------------------------------
@@ -67,9 +91,9 @@ void TranslationSocket::parseTranslation( ofxLibwebsockets::Event& args) {
     
     // split result
     vector<string> splitted = ofSplitString(args.message, "|");
-    string id     = splitted[0];
-    string type = splitted[1];
-    string mesg = splitted[2];
+    string id       = splitted[0];
+    string type     = splitted[1];
+    string mesg     = splitted[2];
     
     // check if already exist
     translated  * trans = getTranslatedForID(id);
@@ -100,7 +124,7 @@ void TranslationSocket::parseTranslation( ofxLibwebsockets::Event& args) {
     //if(type == "RAW")
     // send back for traduction
     
-    ofLogNotice("send back to server") << args.message;
+    //ofLogNotice("send back to server") << args.message;
     server.send( args.message );
     
     

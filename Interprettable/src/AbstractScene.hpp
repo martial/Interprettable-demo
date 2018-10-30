@@ -29,6 +29,9 @@ public:
     virtual void init();
     virtual void quit();
     
+    virtual void setIntroductionImage(string url);
+
+    
     virtual void updateMask(){};
     
     virtual void setMom(SceneManager * mom);
@@ -47,6 +50,9 @@ protected:
     SceneManager * mom;
     ofxAnimatableFloat      circleRadiusPct;
     ofxMask                 mask;
+    ofImage                 introductionImage;
+    
+    int                     step; // scene steps
     
 private:
     

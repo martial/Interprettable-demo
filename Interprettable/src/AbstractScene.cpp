@@ -10,6 +10,8 @@
 
 AbstractScene::AbstractScene() {
     
+    step = 0;
+    
     mask.allocate(ofGetWidth(), ofGetHeight(), ofxMask::LUMINANCE);
     
     circleRadiusPct.reset(0.0);
@@ -51,6 +53,13 @@ void AbstractScene::update() {
     mask.endMask();
     
 }
+
+void  AbstractScene::setIntroductionImage(string url) {
+    
+    introductionImage.load(url);
+    
+}
+
 
 AbstractScene::~AbstractScene() {
     

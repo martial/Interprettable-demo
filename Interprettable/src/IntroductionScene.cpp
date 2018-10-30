@@ -9,8 +9,6 @@
 #include "ofxImgSizeUtils.h"
 #include "SceneManager.hpp"
 
-
-
 void IntroductionScene::setup() {
     mainImage.load("scenes/introduction/barcelone-V2-01.png");
     
@@ -19,13 +17,11 @@ void IntroductionScene::setup() {
 
 void IntroductionScene::prepass() {
     
-    ofRectangle r = ofxImgSizeUtils::getCenteredRect(
-                                                     ofGetWidth(), ofGetHeight(), mainImage.getWidth(), mainImage.getHeight(), true);
+    ofRectangle r = ofxImgSizeUtils::getCenteredRect(ofGetWidth(), ofGetHeight(), mainImage.getWidth(), mainImage.getHeight(), true);
     
     mask.begin();
     mainImage.draw(r);
     mask.end();
-    
     
     mask.draw();
     
