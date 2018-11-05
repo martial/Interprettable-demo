@@ -44,6 +44,7 @@ def read_tensor_from_image_file(file_name, input_height=299, input_width=299,
 				input_mean=0, input_std=255):
   input_name = "file_reader"
   output_name = "normalized"
+  
   file_reader = tf.read_file(file_name, input_name)
 
  
@@ -79,9 +80,9 @@ def load_labels(label_file):
 
 if __name__ == "__main__":
   #get the path of the image to be recognized
-  file_name=sys.argv[1] 
-  model_file = "/Users/erasme/Desktop/interpretabble/Translations/prediction/tf_files/retrained_graph.pb"
-  label_file = "/Users/erasme/Desktop/interpretabble/Translations/prediction/tf_files/retrained_labels.txt"
+  file_name = sys.argv[1]
+  model_file = "tf_files/retrained_graph.pb"
+  label_file = "tf_files/retrained_labels.txt"
   input_height = 224
   input_width = 224
   input_mean = 128

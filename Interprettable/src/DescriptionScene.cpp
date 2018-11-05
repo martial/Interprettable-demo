@@ -53,7 +53,7 @@ void DescriptionScene::prepass() {
     
     
     ofxFontStash2::Style style;
-    style.fontID = "CALVERTMTSTD";
+    style.fontID = "Amaranth-Regular";
     style.fontSize = 22;
     style.color = ofColor(0,0,0);
 

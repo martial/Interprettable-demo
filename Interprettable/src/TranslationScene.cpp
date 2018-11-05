@@ -61,12 +61,12 @@ void TranslationScene::prepass() {
        
         
         ofxFontStash2::Style styleLabel;
-        styleLabel.fontID = "CALVERTMTSTD";
+        styleLabel.fontID = "Amaranth-Regular";
         styleLabel.fontSize = 22;
         styleLabel.color = ofColor(255,0,0);
         
         ofxFontStash2::Style styleLabelTranslation;
-        styleLabelTranslation.fontID = "CALVERTMTSTD";
+        styleLabelTranslation.fontID = "Amaranth-Regular";
         styleLabelTranslation.fontSize = 22;
         styleLabelTranslation.color = ofColor(0,0,0);
 

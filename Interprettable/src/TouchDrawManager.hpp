@@ -25,11 +25,11 @@ public:
     void drawPolyineThickWZ( ofPolyline * line);
     void drawPolyineThick( ofPolyline * line, int thickness);
     
-    void saveToImage();
-    
+    string saveToImage();
+    vector<ofPolyline*> lines;
+
 private:
     
-    vector<ofPolyline*> lines;
     int currentLineId;
     
     ofFbo fbo;

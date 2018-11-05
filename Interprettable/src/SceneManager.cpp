@@ -13,10 +13,15 @@
 
 void SceneManager::setup() {
     
+    
     fonts.setup(false);
     fonts.addFont("CALVERTMTSTD", "assets/fonts/CALVERTMTSTD.ttf");
-    
-
+    fonts.addFont("IBMPlexSans-Light", "assets/fonts/IBMPlexSans-Light.tff");
+    fonts.addFont("IBMPlexSans-Medium", "assets/fonts/IBMPlexSans-Medium.ttf");
+    fonts.addFont("IBMPlexSans-Regular", "assets/fonts/IBMPlexSans-Regular.ttf");
+    fonts.addFont("IBMPlexSans-Regular", "assets/fonts/IBMPlexSans-Regular.ttf");
+    fonts.addFont("Amaranth-Regular", "assets/fonts/Amaranth-Regular.ttf");
+    fonts.addFont("Amaranth-Bold", "assets/fonts/Amaranth-Bold.ttf");
     
     scenes.push_back(AbstractScenePtr(new IntroductionScene()));
     scenes.push_back(AbstractScenePtr(new DescriptionScene()));

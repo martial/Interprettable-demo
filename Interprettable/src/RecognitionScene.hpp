@@ -11,6 +11,7 @@
 #include "AbstractScene.hpp"
 #include "TouchDrawManager.hpp"
 #include "InteractiveButton.hpp"
+#include "ofxOsc.h"
 
 class RecognitionScene : public AbstractScene {
     
@@ -20,7 +21,14 @@ public:
     
     void init();
     void setup();
+    void update();
     void prepass();
+    
+    void drawInvitationText();
+    void drawResult();
+    
+    void loadImageResults();
+    void switchResults();
     
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
@@ -30,13 +38,22 @@ public:
     
 private:
     
+    string caption;
     ofImage backgroundImage;
     
     ofImage maskImage;
     ofxMask *drawingMask;
     
     TouchDrawManager touchDrawManager;
-    
     InteractiveButton clearButton;
+    
+    ofxOscReceiver osc;
+    ofxOscSender sender;
+    
+    bool                    bHasFoundDrawing;
+    ofxAnimatableFloat      resultPct;
+    
+    vector<ofImage>         imagesResult;
+
 };
 

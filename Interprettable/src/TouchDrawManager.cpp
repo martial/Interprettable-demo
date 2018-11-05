@@ -112,11 +112,18 @@ void TouchDrawManager::drawPolyineThick( ofPolyline * line, int thickness){
     
 }
 
-void TouchDrawManager::saveToImage() {
+string TouchDrawManager::saveToImage() {
     
     fbo.readToPixels(pixels);
-    pixels.setImageType(OF_IMAGE_COLOR);
-    ofSaveImage(pixels, "ouput.jpg");
+    pixels.setImageType(OF_IMAGE_GRAYSCALE);
+    
+    pixels.crop(170, 300, 700, 700);
+    pixels.resize(224, 224);
+    
+    string url = "output.jpg";
+    ofSaveImage(pixels, url);
+    
+    return ofToDataPath(url);
 
     
 }
