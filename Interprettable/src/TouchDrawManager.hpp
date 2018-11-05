@@ -26,10 +26,10 @@ public:
     void drawPolyineThick( ofPolyline * line, int thickness);
     
     string saveToImage();
-    
+    vector<ofPolyline*> lines;
+
 private:
     
-    vector<ofPolyline*> lines;
     int currentLineId;
     
     ofFbo fbo;

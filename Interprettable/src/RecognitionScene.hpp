@@ -24,6 +24,12 @@ public:
     void update();
     void prepass();
     
+    void drawInvitationText();
+    void drawResult();
+    
+    void loadImageResults();
+    void switchResults();
+    
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
     void mouseReleased(int x, int y, int button);;
@@ -43,5 +49,11 @@ private:
     
     ofxOscReceiver osc;
     ofxOscSender sender;
+    
+    bool                    bHasFoundDrawing;
+    ofxAnimatableFloat      resultPct;
+    
+    vector<ofImage>         imagesResult;
+
 };
 
