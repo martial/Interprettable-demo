@@ -23,7 +23,7 @@ void TouchDrawManager::update() {
 void TouchDrawManager::draw() {
     
     fbo.begin();
-    ofBackground(255);
+    ofBackground(255,235,243);
     ofSetColor(0);
     for (int i=0; i<lines.size(); i++) {
         drawPolyineThickWZ(lines[i]);

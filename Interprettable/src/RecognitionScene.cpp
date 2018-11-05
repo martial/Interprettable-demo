@@ -16,7 +16,6 @@ void RecognitionScene::setup() {
     touchDrawManager.setup();
     
     setIntroductionImage("scenes/recognition/Barcelone13.png");
-    
     backgroundImage.load("scenes/recognition/background.jpg");
     
     drawingMask = new ofxMask();
@@ -28,6 +27,9 @@ void RecognitionScene::setup() {
     maskImage.draw(0.0,0.0);
     drawingMask->endMask();
     
+    clearButton.setup();
+    clearButton.setImageUrl("scenes/recognition/erase_btn.png");
+
     
 }
 
@@ -36,6 +38,9 @@ void RecognitionScene::init() {
     AbstractScene::init();
     step = 0;
     
+    touchDrawManager.clear();
+    
+    ofAddListener(clearButton.clickEvent, this, &RecognitionScene::onClearButtonClickedEventHandler);
 }
 
 
@@ -59,27 +64,33 @@ void RecognitionScene::prepass() {
         
         
         drawingMask->begin();
-        
        // draw
-        
         touchDrawManager.draw();
-
         
         drawingMask->end();
         
         drawingMask->draw();
         
-        
+        clearButton.x = 580;
+        clearButton.y = 255;
+
+        clearButton.draw();
+
         
     }
     
     
     mask.end();
-    
-    
     mask.draw();
     
 }
+
+void RecognitionScene::onClearButtonClickedEventHandler(ofEventArgs & e) {
+
+    touchDrawManager.clear();
+    
+}
+
 
 void RecognitionScene::mousePressed(int x, int y, int button) {
     
@@ -87,19 +98,27 @@ void RecognitionScene::mousePressed(int x, int y, int button) {
         step++;
     
     
-    if(step == 1)
+    if(step == 1) {
         touchDrawManager.addLine();
+        
+    }
     
 }
 
 void RecognitionScene::mouseDragged(int x, int y, int button) {
 
     if(step == 1) {
-        touchDrawManager.addPointToCurrent(ofPoint(x ,y,20 + 10 * sin(ofGetElapsedTimef() * 5)));
-        
-        ofLogNotice("adding line");
+        touchDrawManager.addPointToCurrent(ofPoint(x ,y,10 + 5 * sin(ofGetElapsedTimef() * 2.5)));
     }
 
     
 }
+
+void RecognitionScene::mouseReleased(int x, int y, int button) {
+    
+    if(step == 1) {
+        clearButton.mouseReleased(x,y,button);
+    }
+}
+
 
