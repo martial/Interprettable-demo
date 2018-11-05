@@ -30,6 +30,8 @@
 		6D73A566CFEC0B462FE6E43C /* Reactor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2232A9453E355593EF36ADA7 /* Reactor.cpp */; };
 		72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
 		74D31933EE82E12834DB3B06 /* ofxAnimatableOfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 777D89F9EECAC3FE2405D5D1 /* ofxAnimatableOfColor.cpp */; };
+		83212C2E21904C2800FC48CA /* RecognitionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C2C21904C2800FC48CA /* RecognitionScene.cpp */; };
+		83212C3121904EF500FC48CA /* TouchDrawManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C2F21904EF500FC48CA /* TouchDrawManager.cpp */; };
 		83A3D97B2188C545002B7E6F /* PresentationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9682188C543002B7E6F /* PresentationScene.cpp */; };
 		83A3D97C2188C545002B7E6F /* AbstractScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9692188C544002B7E6F /* AbstractScene.cpp */; };
 		83A3D97D2188C545002B7E6F /* IntroductionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D96A2188C544002B7E6F /* IntroductionScene.cpp */; };
@@ -246,6 +248,10 @@
 		7E57AAE3FAB29F87D19451BC /* sampling.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sampling.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/sampling.h; sourceTree = SOURCE_ROOT; };
 		81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../../../addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
 		826D2BD7602562E48C8B3953 /* common.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = common.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core/cuda/common.hpp; sourceTree = SOURCE_ROOT; };
+		83212C2C21904C2800FC48CA /* RecognitionScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecognitionScene.cpp; sourceTree = "<group>"; };
+		83212C2D21904C2800FC48CA /* RecognitionScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecognitionScene.hpp; sourceTree = "<group>"; };
+		83212C2F21904EF500FC48CA /* TouchDrawManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TouchDrawManager.cpp; sourceTree = "<group>"; };
+		83212C3021904EF500FC48CA /* TouchDrawManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TouchDrawManager.hpp; sourceTree = "<group>"; };
 		83A3D9662188C543002B7E6F /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
 		83A3D9672188C543002B7E6F /* TranslationSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TranslationSocket.hpp; sourceTree = "<group>"; };
 		83A3D9682188C543002B7E6F /* PresentationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PresentationScene.cpp; sourceTree = "<group>"; };
@@ -1222,6 +1228,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				83212C2F21904EF500FC48CA /* TouchDrawManager.cpp */,
+				83212C3021904EF500FC48CA /* TouchDrawManager.hpp */,
 				83A3D9692188C544002B7E6F /* AbstractScene.cpp */,
 				83A3D9752188C544002B7E6F /* AbstractScene.hpp */,
 				83A3D96D2188C544002B7E6F /* DescriptionScene.cpp */,
@@ -1245,6 +1253,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				F8AE767A163D6373A423E341 /* TransitionManager.hpp */,
 				F1D7C62CEB435FDB35D91F27 /* TransitionManager.cpp */,
+				83212C2C21904C2800FC48CA /* RecognitionScene.cpp */,
+				83212C2D21904C2800FC48CA /* RecognitionScene.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1518,6 +1528,7 @@
 				63020F16C7E8DED980111241 /* ofxCvImage.cpp in Sources */,
 				83A3D9822188C545002B7E6F /* TranslationSocket.cpp in Sources */,
 				169D3C72FDE6C5590A1616F5 /* ofxCvFloatImage.cpp in Sources */,
+				83212C2E21904C2800FC48CA /* RecognitionScene.cpp in Sources */,
 				FB09C6B2A1DA0EA217240CB8 /* ofxCvGrayscaleImage.cpp in Sources */,
 				83A3D97C2188C545002B7E6F /* AbstractScene.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
@@ -1529,6 +1540,7 @@
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
+				83212C3121904EF500FC48CA /* TouchDrawManager.cpp in Sources */,
 				83A3D97E2188C545002B7E6F /* DescriptionScene.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				83A3D97B2188C545002B7E6F /* PresentationScene.cpp in Sources */,

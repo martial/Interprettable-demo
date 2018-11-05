@@ -51,13 +51,14 @@ void TranslationScene::prepass() {
    
     if (step == 1 ) {
       
+        r = ofxImgSizeUtils::getCenteredRect(ofGetWidth(), ofGetHeight(), backgroundImage.getWidth(), backgroundImage.getHeight(), true);
+        backgroundImage.draw(r);
         
 
         translationMask->begin();
         
         // draw all text
-        r = ofxImgSizeUtils::getCenteredRect(ofGetWidth(), ofGetHeight(), backgroundImage.getWidth(), backgroundImage.getHeight(), true);
-        backgroundImage.draw(r);
+       
         
         ofxFontStash2::Style styleLabel;
         styleLabel.fontID = "CALVERTMTSTD";
