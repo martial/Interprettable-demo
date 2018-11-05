@@ -25,7 +25,7 @@ public:
     void drawPolyineThickWZ( ofPolyline * line);
     void drawPolyineThick( ofPolyline * line, int thickness);
     
-    void saveToImage();
+    string saveToImage();
     
 private:
     

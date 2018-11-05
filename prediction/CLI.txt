@@ -28,3 +28,8 @@ python2 -m scripts.retrain \
   --output_labels=tf_files/retrained_labels.txt \
   --architecture="${ARCHITECTURE}" \
   --image_dir=tf_files/drawings
+
+
+tensorflow.python.framework.errors_impl.NotFoundError
+
+python3 -m scripts.label_image --image="/Users/martial/Library/Messages/Attachments/eb/11/E181D696-66D9-448C-9D9A-044B93F9DCFF/IMG_0946.JPG"

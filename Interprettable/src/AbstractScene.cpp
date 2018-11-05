@@ -46,7 +46,7 @@ void AbstractScene::update() {
     circleRadiusPct.update(1.0 / 60.0f);
     
     mask.beginMask();
-    ofSetColor(255);    // more black, more transparent
+    ofSetColor(255, 255);    // more black, more transparent
     ofDrawEllipse(ofGetWidth() * .5, ofGetHeight() * .5,
                   (ofGetWidth() + ofGetHeight()) * circleRadiusPct.val(),
                   (ofGetWidth() + ofGetHeight()) * circleRadiusPct.val());

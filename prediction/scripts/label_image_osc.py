@@ -198,6 +198,10 @@ if __name__ == "__main__":
         #Sends the label (and its score) of the prediction that has the best score to the server.  
         print(template.format(labels[top_k[0]], results[top_k[0]]))
         mess = labels[top_k[0]]
+        
+        if results[top_k[0]] < 0.9:
+            mess = "Not sure"
+        
         client.send( OSCMessage(mess ) )
 
   server.addMsgHandler( "/img", img_osc_callback )
