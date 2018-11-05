@@ -1,14 +1,37 @@
 {
   "images": [
-    {
-      "text": "ofxFontStash2 allows you to draw text. It can draw individual lines of text, or longer texts constrained to a column (to create paragraph, automatically flowing the text for you).\n\nIt offers text alignment (left, center, right).",
-      "filename": "img1.png",
-      "title": "hello"
+     {
+     "text": "In Lyon, centers of maternal and child protection are created to guarantee pregnant women and young children privileged access to protection, prevention and consultation. Some of the many patients are people who have migrated from other countries, where the dialect is different from that host country.",
+     "filename": "img1.jpg",
+     "title": "The context",
+     "boxColor": {
+        "r": 255,
+        "g": 170,
+        "b": 205,
+        "a": 50
+      }
+     },
+     {
+      "text": "Relations between the health professional and asylum seekers are weakened by the language barrier. It affects everyone’s understanding and prevents them from having access to appropriate advice and care. The wellbeing and health of the child is therefore not fully guaranteed.",
+      "filename": "img2.png",
+      "title": "The issue",
+      "boxColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 50
+      }
     },
      {
-     "text": "coucou",
-     "filename": "img2.jpg",
-     "title": "hello"
-     }
+      "text": "The erasable felt surface placed on the practitioner's desk is an intermediary who accompanies and facilitates dialogue without hindering non-verbal communication (gestures, facial expressions, etc.). To do this, it highlights a common mode of expression by using a purely visual language. Elements are projected on it, which are generated either by the doctor or by the drawing.",
+      "filename": "img3.png",
+      "title": "The solution",
+      "boxColor": {
+        "r": 10,
+        "g": 118,
+        "b": 119,
+        "a": 50
+      }
+    }
   ]
 }

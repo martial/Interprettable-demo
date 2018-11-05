@@ -73,6 +73,8 @@ void TranslationScene::prepass() {
         ofApp * app = (ofApp*)ofGetAppPtr();
         
         float yPos = 400;
+
+
         for(int i=0; i<app->translationSocket.translations.size(); i++) {
             
             ofPushMatrix();
@@ -84,14 +86,16 @@ void TranslationScene::prepass() {
             float y = 0.0;
             ofSetColor(255,255);
             ofRectangle bbox = mom->fonts.drawColumn(text, styleLabel, x, y, colW);
-            
-            text = app->translationSocket.translations[i].trans;
+
+       translationSocket.translations[i].trans;
             x = 0.0;
             y = bbox.getHeight() + 20;
             ofSetColor(255,255);
             bbox = mom->fonts.drawColumn(text, styleLabelTranslation, x, y, colW);
+
             
             yPos += bbox.y + bbox.getHeight() + 40;
+
             
             ofPopMatrix();
 

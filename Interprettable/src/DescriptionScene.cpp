@@ -56,6 +56,11 @@ void DescriptionScene::prepass() {
     style.fontID = "CALVERTMTSTD";
     style.fontSize = 22;
     style.color = ofColor(0,0,0);
+
+    int boxColorR = configJson["images"][currentImage]["boxColor"]["r"];
+    int boxColorG = configJson["images"][currentImage]["boxColor"]["g"];
+    int boxColorB = configJson["images"][currentImage]["boxColor"]["b"];
+    int boxColorA = configJson["images"][currentImage]["boxColor"]["a"];
     
     string text = configJson["images"][currentImage]["text"];
     
@@ -64,7 +69,7 @@ void DescriptionScene::prepass() {
     float y = 100;
     ofSetColor(0,255);
     ofRectangle bbox = mom->fonts.drawColumn(text, style, x, y, colW);
-    ofSetColor(255,13);
+    ofSetColor(boxColorR,boxColorG,boxColorB,boxColorA);
     ofDrawRectangle(bbox);
     
     
