@@ -11,6 +11,7 @@
 #include "ofMain.h"
 #include "ofxMask.h"
 #include "ofxAnimatableFloat.h"
+#include "InteractiveButton.hpp""
 
 class SceneManager;
 
@@ -24,7 +25,7 @@ public:
     virtual void setup(){};
     virtual void update();
     virtual void prepass(){};
-    virtual void draw(){};
+    virtual void draw();
     
     virtual void init();
     virtual void quit();
@@ -43,7 +44,12 @@ public:
     virtual void mouseMoved(int x, int y ){};
     virtual void mouseDragged(int x, int y, int button){};
     virtual void mousePressed(int x, int y, int button){};
-    virtual void mouseReleased(int x, int y, int button){};
+    virtual void mouseReleased(int x, int y, int button);
+    
+    virtual void showNextArrow();
+    virtual void hideNextArrow();
+    
+    virtual void onNextArrowClickHandler(ofEventArgs & e);
     
 protected:
     
@@ -53,6 +59,9 @@ protected:
     ofImage                 introductionImage;
     
     int                     step; // scene steps
+    
+    bool                    bDrawNextArrow;
+    InteractiveButton       nextArrow;
     
 private:
     

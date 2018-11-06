@@ -21,6 +21,7 @@ public:
     void init();
 
     void mousePressed(int x, int y, int button);
+    void onNextArrowClickHandler(ofEventArgs & e);
 
     
 private:

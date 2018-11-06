@@ -98,7 +98,7 @@ void SceneManager::onQuitSceneFinishedHandler(ofEventArgs & e) {
 
 void SceneManager::keyPressed(int key) {
     
-        scenes[currentSceneIndex]->keyPressed(key);
+    scenes[currentSceneIndex]->keyPressed(key);
 }
 
 void SceneManager::keyReleased(int key) {

@@ -19,7 +19,6 @@ void TranslationScene::setup() {
     translationMask->allocate(ofGetWidth(), ofGetHeight(), ofxMask::LUMINANCE);
     maskImage.load("scenes/translation/mask.jpg");
     
-    
     translationMask->beginMask();
     ofSetColor(255);
     maskImage.draw(0.0,0.0);
@@ -32,7 +31,7 @@ void TranslationScene::init() {
 
     AbstractScene::init();
     step = 0;
-    
+    hideNextArrow();
 }
 
 
@@ -93,36 +92,32 @@ void TranslationScene::prepass() {
             ofSetColor(255,255);
             bbox = mom->fonts.drawColumn(text, styleLabelTranslation, x, y, colW);
 
-            
             yPos += bbox.y + bbox.getHeight() + 40;
 
-            
             ofPopMatrix();
-
-            
             
         }
         
         translationMask->end();
         
         translationMask->draw();
-
-        
         
     }
     
-    
-    
+    AbstractScene::draw();
     mask.end();
-    
-    
     mask.draw();
     
 }
 
 void TranslationScene::mousePressed(int x, int y, int button) {
     
-    step++;
+    if(step == 0) {
+        step++;
+        showNextArrow();
+    }
+    
+   
     
 }
 

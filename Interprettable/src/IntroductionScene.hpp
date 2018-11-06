@@ -9,6 +9,7 @@
 
 #include "ofMain.h"
 #include "AbstractScene.hpp"
+#include "InteractiveButton.hpp"
 
 class IntroductionScene : public AbstractScene{
   
@@ -19,9 +20,16 @@ public:
     void prepass();
     
     void mousePressed(int x, int y, int button);
+    void mouseReleased(int x, int y, int button);
 
 private:
     
+    virtual void onDiscoverBtnHandler(ofEventArgs & e);
+    virtual void onVideoBtnHandler(ofEventArgs & e);
+
+    
     ofImage mainImage;
+    InteractiveButton discoverBtn, videoBtn;
+    
 };
 

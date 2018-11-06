@@ -11,6 +11,8 @@
 
 void DescriptionScene::setup() {
     
+    
+    
     ofFile file("scenes/presentation/config.json");
     
     if(file.exists()){
@@ -38,6 +40,8 @@ void DescriptionScene::init() {
     
     AbstractScene::init();
     currentImage = 0;
+    
+    showNextArrow();
 
 }
 
@@ -49,6 +53,7 @@ void DescriptionScene::prepass() {
                      ofGetWidth(), ofGetHeight(), images[currentImage].getWidth(), images[currentImage].getHeight(), false);
     
     mask.begin();
+    ofEnableAlphaBlending();
     images[currentImage].draw(r);
     
     
@@ -80,9 +85,10 @@ void DescriptionScene::prepass() {
     
     ofSetColor(0,255);
     mom->fonts.drawColumn(text, style, x, y, colW);
-   
     
-    
+    ofSetColor(255,255);
+    AbstractScene::draw();
+
     mask.end();
     
     mask.draw();
@@ -98,6 +104,13 @@ void DescriptionScene::mousePressed(int x, int y, int button) {
     }
     
 }
+
+void DescriptionScene::onNextArrowClickHandler(ofEventArgs & e) {
+    
+    mousePressed(0,0,0);
+    
+}
+
 
 
 

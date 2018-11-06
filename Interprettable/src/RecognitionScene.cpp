@@ -147,7 +147,7 @@ void RecognitionScene::prepass() {
         drawResult();
         
     }
-    
+    AbstractScene::draw();
     mask.end();
     mask.draw();
     
@@ -323,8 +323,12 @@ void RecognitionScene::onClearButtonClickedEventHandler(ofEventArgs & e) {
 
 void RecognitionScene::mousePressed(int x, int y, int button) {
     
-    if(step == 0)
+
+    
+    if(step == 0) {
         step++;
+        showNextArrow();
+    }
     
     if(step == 1) {
         
@@ -345,6 +349,8 @@ void RecognitionScene::mouseDragged(int x, int y, int button) {
 }
 
 void RecognitionScene::mouseReleased(int x, int y, int button) {
+    
+    AbstractScene::mouseReleased(x,y,button);
     
     if(step == 1) {
         

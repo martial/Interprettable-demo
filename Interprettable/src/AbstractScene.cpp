@@ -17,6 +17,8 @@ AbstractScene::AbstractScene() {
     circleRadiusPct.reset(0.0);
     circleRadiusPct.setCurve(EASE_IN);
     circleRadiusPct.setDuration(.55);
+    
+    bDrawNextArrow = false;
 }
 
 void AbstractScene::init() {
@@ -54,6 +56,19 @@ void AbstractScene::update() {
     
 }
 
+void AbstractScene::draw() {
+    
+    if (bDrawNextArrow) {
+        
+        nextArrow.x = ofGetWidth() - nextArrow.getWidth();
+        nextArrow.y = ofGetHeight() * .5 - nextArrow.getWidth() *.5;
+        nextArrow.draw();
+        
+    }
+    
+}
+
+
 void  AbstractScene::setIntroductionImage(string url) {
     
     introductionImage.load(url);
@@ -72,4 +87,38 @@ void AbstractScene::setMom(SceneManager * mom) {
     this->mom = mom;
     
 }
+
+void AbstractScene::showNextArrow() {
+    
+    bDrawNextArrow = true;
+    nextArrow.setup();
+    nextArrow.setImageUrl("assets/images/next_arrow.png");
+    ofAddListener(nextArrow.clickEvent, this, &AbstractScene::onNextArrowClickHandler);
+    
+}
+
+void AbstractScene::mouseReleased(int x, int y, int button) {
+
+    if(bDrawNextArrow)
+        nextArrow.mouseReleased(x, y, button);
+    
+    ofLogNotice("mouse released");
+    
+};
+
+
+void AbstractScene::hideNextArrow() {
+    
+    bDrawNextArrow = false;
+    ofRemoveListener(nextArrow.clickEvent, this, &AbstractScene::onNextArrowClickHandler);
+
+}
+
+void AbstractScene::onNextArrowClickHandler(ofEventArgs & e) {
+    
+    // default case
+    mom->nextScene();
+    
+}
+
 
