@@ -54,7 +54,7 @@ void DescriptionScene::prepass() {
     
     ofxFontStash2::Style style;
     style.fontID = "Amaranth-Regular";
-    style.fontSize = 22;
+    style.fontSize = 28;
     style.color = ofColor(0,0,0);
 
     int boxColorR = configJson["images"][currentImage]["boxColor"]["r"];
@@ -65,12 +65,22 @@ void DescriptionScene::prepass() {
     string text = configJson["images"][currentImage]["text"];
     
     float colW = 300;
-    float x = 200;
-    float y = 100;
-    ofSetColor(0,255);
-    ofRectangle bbox = mom->fonts.drawColumn(text, style, x, y, colW);
+    float x = 250;
+    float y = 160;
+    ofRectangle bbox = mom->fonts.getTextBoundsNVG(text, style, x, y, colW, OF_ALIGN_HORZ_LEFT);
+   
+    float padding = 15;
+    bbox.width += padding *2;
+    bbox.height += padding * 2;
+    bbox.x -= padding;
+    bbox.y -= padding;
+
     ofSetColor(boxColorR,boxColorG,boxColorB,boxColorA);
     ofDrawRectangle(bbox);
+    
+    ofSetColor(0,255);
+    mom->fonts.drawColumn(text, style, x, y, colW);
+   
     
     
     mask.end();

@@ -2,3 +2,11 @@ prediction/tf_files/*
 translator/node_modules/*
 Interprettable/obj/*
 TouchDrawTest/obj/*
+Interprettable/bin/data/scenes/recognition/biberon/Dosage/Iconr
+Interprettable/bin/data/scenes/recognition/bouche/Iconr
+Interprettable/bin/data/scenes/recognition/fleche/Iconr
+Interprettable/bin/data/scenes/recognition/lit/Iconr
+Interprettable/bin/data/scenes/recognition/lune/Iconr
+Interprettable/bin/data/scenes/recognition/ambulance/Iconr
+Interprettable/bin/data/scenes/recognition/biberon/Iconr
+Interprettable/bin/data/scenes/recognition/maison/Iconr

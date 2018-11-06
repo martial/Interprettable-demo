@@ -10,6 +10,7 @@
 #include "DescriptionScene.hpp"
 #include "TranslationScene.hpp"
 #include "RecognitionScene.hpp"
+#include "EndingScene.hpp"
 
 void SceneManager::setup() {
     
@@ -27,6 +28,7 @@ void SceneManager::setup() {
     scenes.push_back(AbstractScenePtr(new DescriptionScene()));
     scenes.push_back(AbstractScenePtr(new TranslationScene()));
     scenes.push_back(AbstractScenePtr(new RecognitionScene()));
+    scenes.push_back(AbstractScenePtr(new EndingScene()));
 
     for (auto & scene : scenes ) {
         scene->setMom(this);

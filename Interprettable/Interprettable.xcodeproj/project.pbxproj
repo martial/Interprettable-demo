@@ -33,6 +33,7 @@
 		83212C2E21904C2800FC48CA /* RecognitionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C2C21904C2800FC48CA /* RecognitionScene.cpp */; };
 		83212C3121904EF500FC48CA /* TouchDrawManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C2F21904EF500FC48CA /* TouchDrawManager.cpp */; };
 		83212C342190566C00FC48CA /* InteractiveButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C322190566C00FC48CA /* InteractiveButton.cpp */; };
+		83212C382190A09D00FC48CA /* EndingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C362190A09D00FC48CA /* EndingScene.cpp */; };
 		83A3D97B2188C545002B7E6F /* PresentationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9682188C543002B7E6F /* PresentationScene.cpp */; };
 		83A3D97C2188C545002B7E6F /* AbstractScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9692188C544002B7E6F /* AbstractScene.cpp */; };
 		83A3D97D2188C545002B7E6F /* IntroductionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D96A2188C544002B7E6F /* IntroductionScene.cpp */; };
@@ -255,6 +256,8 @@
 		83212C3021904EF500FC48CA /* TouchDrawManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TouchDrawManager.hpp; sourceTree = "<group>"; };
 		83212C322190566C00FC48CA /* InteractiveButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InteractiveButton.cpp; sourceTree = "<group>"; };
 		83212C332190566C00FC48CA /* InteractiveButton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InteractiveButton.hpp; sourceTree = "<group>"; };
+		83212C362190A09D00FC48CA /* EndingScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EndingScene.cpp; sourceTree = "<group>"; };
+		83212C372190A09D00FC48CA /* EndingScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EndingScene.hpp; sourceTree = "<group>"; };
 		83A3D9662188C543002B7E6F /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
 		83A3D9672188C543002B7E6F /* TranslationSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TranslationSocket.hpp; sourceTree = "<group>"; };
 		83A3D9682188C543002B7E6F /* PresentationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PresentationScene.cpp; sourceTree = "<group>"; };
@@ -1260,6 +1263,8 @@
 				83212C2D21904C2800FC48CA /* RecognitionScene.hpp */,
 				83212C322190566C00FC48CA /* InteractiveButton.cpp */,
 				83212C332190566C00FC48CA /* InteractiveButton.hpp */,
+				83212C362190A09D00FC48CA /* EndingScene.cpp */,
+				83212C372190A09D00FC48CA /* EndingScene.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1494,6 +1499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				83212C382190A09D00FC48CA /* EndingScene.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				83A3D9842188C545002B7E6F /* TranslationScene.cpp in Sources */,
 				B6E938493312FB854AFB1D03 /* TransitionManager.cpp in Sources */,

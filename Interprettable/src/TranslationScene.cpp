@@ -87,7 +87,7 @@ void TranslationScene::prepass() {
             ofSetColor(255,255);
             ofRectangle bbox = mom->fonts.drawColumn(text, styleLabel, x, y, colW);
 
-       translationSocket.translations[i].trans;
+            app->translationSocket.translations[i].trans;
             x = 0.0;
             y = bbox.getHeight() + 20;
             ofSetColor(255,255);
