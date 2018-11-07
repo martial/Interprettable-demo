@@ -192,7 +192,7 @@ void TranslationScene::prepass() {
             else
                 ofSetColor(255,0,0);
             
-            ofDrawRectangle(backBox);
+            ofDrawRectRounded(backBox, 5, 5, 5, 5);
             
             ofSetColor(255);
             font.drawString(label, - bbox.width * .5, + bbox.height * .5);
