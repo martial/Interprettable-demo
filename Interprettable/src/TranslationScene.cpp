@@ -95,6 +95,12 @@ void TranslationScene::init() {
     step = 0;
     hideNextArrow();
     currentLanguage = 0;
+    
+    for(int i=0; i<boxes.size(); i++) {
+
+        boxes[i].get()->setPosition(1200 + ofRandom(200), 200);
+        
+    }
 }
 
 
