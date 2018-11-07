@@ -34,6 +34,7 @@
 		83212C3121904EF500FC48CA /* TouchDrawManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C2F21904EF500FC48CA /* TouchDrawManager.cpp */; };
 		83212C342190566C00FC48CA /* InteractiveButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C322190566C00FC48CA /* InteractiveButton.cpp */; };
 		83212C382190A09D00FC48CA /* EndingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83212C362190A09D00FC48CA /* EndingScene.cpp */; };
+		833B49522192E7F600D66BA2 /* VideoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 833B49502192E7F600D66BA2 /* VideoScene.cpp */; };
 		83A3D97B2188C545002B7E6F /* PresentationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9682188C543002B7E6F /* PresentationScene.cpp */; };
 		83A3D97C2188C545002B7E6F /* AbstractScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D9692188C544002B7E6F /* AbstractScene.cpp */; };
 		83A3D97D2188C545002B7E6F /* IntroductionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83A3D96A2188C544002B7E6F /* IntroductionScene.cpp */; };
@@ -258,6 +259,8 @@
 		83212C332190566C00FC48CA /* InteractiveButton.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InteractiveButton.hpp; sourceTree = "<group>"; };
 		83212C362190A09D00FC48CA /* EndingScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EndingScene.cpp; sourceTree = "<group>"; };
 		83212C372190A09D00FC48CA /* EndingScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EndingScene.hpp; sourceTree = "<group>"; };
+		833B49502192E7F600D66BA2 /* VideoScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VideoScene.cpp; sourceTree = "<group>"; };
+		833B49512192E7F600D66BA2 /* VideoScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VideoScene.hpp; sourceTree = "<group>"; };
 		83A3D9662188C543002B7E6F /* SceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneManager.hpp; sourceTree = "<group>"; };
 		83A3D9672188C543002B7E6F /* TranslationSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TranslationSocket.hpp; sourceTree = "<group>"; };
 		83A3D9682188C543002B7E6F /* PresentationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PresentationScene.cpp; sourceTree = "<group>"; };
@@ -1265,6 +1268,8 @@
 				83212C332190566C00FC48CA /* InteractiveButton.hpp */,
 				83212C362190A09D00FC48CA /* EndingScene.cpp */,
 				83212C372190A09D00FC48CA /* EndingScene.hpp */,
+				833B49502192E7F600D66BA2 /* VideoScene.cpp */,
+				833B49512192E7F600D66BA2 /* VideoScene.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1534,6 +1539,7 @@
 				9EF1133BC23669A5C94FE30F /* jsoncpp.cpp in Sources */,
 				432870D8DA9279DB2A514DC1 /* ofxMask.cpp in Sources */,
 				250A95BA26587BE85DB0A353 /* ofxCvColorImage.cpp in Sources */,
+				833B49522192E7F600D66BA2 /* VideoScene.cpp in Sources */,
 				D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */,
 				1D5F3298C2FA073628012944 /* ofxCvContourFinder.cpp in Sources */,
 				E212C821D1064B92DD953A42 /* ofxCvHaarFinder.cpp in Sources */,

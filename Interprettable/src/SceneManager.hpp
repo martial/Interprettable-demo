@@ -22,6 +22,7 @@ public:
     void draw();
     
     void setSceneIndex(int index);
+
     void nextScene();
     
     void startScene();
@@ -44,6 +45,7 @@ private:
     
     int currentSceneIndex, dyingSceneIndex;
     
+    int idleElapsed, startingIdleTime;
 };
 
 #endif /* SceneManager_hpp */

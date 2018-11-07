@@ -23,7 +23,10 @@ AbstractScene::AbstractScene() {
 
 void AbstractScene::init() {
     
+    startingTimeMillis = ofGetElapsedTimeMillis();
     circleRadiusPct.animateTo(1.0);
+    
+    
     
 }
 
@@ -44,6 +47,8 @@ void AbstractScene::onCircleRadiusQuitFinished(ofxAnimatable::AnimationEvent & e
 
 
 void AbstractScene::update() {
+    
+    elapsedTimeMillis = startingTimeMillis - ofGetElapsedTimeMillis();
     
     circleRadiusPct.update(1.0 / 60.0f);
     

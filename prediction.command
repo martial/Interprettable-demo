@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app_path="/Users/erasme/Desktop/interpretabble/Translations/prediction/"     
+app_path="prediction/"     
 cd $app_path
 
 echo "Début de la prédiction"

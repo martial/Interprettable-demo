@@ -11,6 +11,7 @@
 #include "TranslationScene.hpp"
 #include "RecognitionScene.hpp"
 #include "EndingScene.hpp"
+#include "VideoScene.hpp"
 
 void SceneManager::setup() {
     
@@ -29,6 +30,8 @@ void SceneManager::setup() {
     scenes.push_back(AbstractScenePtr(new TranslationScene()));
     scenes.push_back(AbstractScenePtr(new RecognitionScene()));
     scenes.push_back(AbstractScenePtr(new EndingScene()));
+    scenes.push_back(AbstractScenePtr(new VideoScene()));
+
 
     for (auto & scene : scenes ) {
         scene->setMom(this);
@@ -42,6 +45,13 @@ void SceneManager::setup() {
 }
 
 void SceneManager::update() {
+    
+    idleElapsed = ofGetElapsedTimeMillis() - startingIdleTime;
+    
+    if(idleElapsed > 180000 && currentSceneIndex != scenes.size() - 1 ) {
+        setSceneIndex(scenes.size() - 1);
+    }
+    
     
     if(dyingSceneIndex >= 0)
         scenes[dyingSceneIndex]->update();
@@ -75,7 +85,8 @@ void SceneManager::nextScene() {
     int actual = currentSceneIndex;
     actual++;
     
-    if(actual > scenes.size() - 1)
+    // last video scene is NOT into the loop
+    if(actual > scenes.size() - 2)
         actual = 0.0;
     
     setSceneIndex(actual);
@@ -118,6 +129,8 @@ void SceneManager::mouseDragged(int x, int y, int button) {
 
 void SceneManager::mousePressed(int x, int y, int button) {
     
+    startingIdleTime = ofGetElapsedTimeMillis();
+
     scenes[currentSceneIndex]->mousePressed(x, y, button);
 }
 

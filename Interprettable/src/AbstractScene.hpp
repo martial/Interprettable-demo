@@ -63,8 +63,11 @@ protected:
     bool                    bDrawNextArrow;
     InteractiveButton       nextArrow;
     
+    int                     elapsedTimeMillis;
+    
 private:
     
+    int  startingTimeMillis;
     void onCircleRadiusQuitFinished(ofxAnimatable::AnimationEvent & e);
 };
 

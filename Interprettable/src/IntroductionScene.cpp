@@ -18,6 +18,9 @@ void IntroductionScene::setup() {
     videoBtn.setup();
     videoBtn.setImageUrl("assets/images/video_btn.png");
     
+    ofAddListener(discoverBtn.clickEvent, this, &IntroductionScene::onDiscoverBtnHandler);
+    ofAddListener(videoBtn.clickEvent, this, &IntroductionScene::onVideoBtnHandler);
+
     showNextArrow();
 
 }
@@ -54,13 +57,18 @@ void IntroductionScene::mousePressed(int x, int y, int button) {
 
 void IntroductionScene::mouseReleased(int x, int y, int button) {
     AbstractScene::mouseReleased(x, y, button);
+    discoverBtn.mouseReleased(x, y, button);
+    videoBtn.mouseReleased(x, y, button);
+
 }
 
 void IntroductionScene::onDiscoverBtnHandler(ofEventArgs & e) {
-    
+    mom->nextScene();
 }
 
 void IntroductionScene::onVideoBtnHandler(ofEventArgs & e) {
+    
+    mom->setSceneIndex(mom->scenes.size() -1);
     
 }
 
