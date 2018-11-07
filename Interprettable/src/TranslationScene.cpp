@@ -138,7 +138,7 @@ void TranslationScene::prepass() {
         float yPos = 400;
 
 
-        for(int i=0; i<app->translationSocket.translations.size(); i++) {
+        for(int i=app->translationSocket.translations.size() - 1; i>=0; i--) {
             
             ofPushMatrix();
             ofTranslate(250, yPos);
@@ -150,7 +150,7 @@ void TranslationScene::prepass() {
             ofSetColor(255,255);
             ofRectangle bbox = mom->fonts.drawColumn(text, styleLabel, x, y, colW);
 
-            app->translationSocket.translations[i].trans;
+            text = app->translationSocket.translations[i].trans;
             x = 0.0;
             y = bbox.getHeight() + 20;
             ofSetColor(255,255);

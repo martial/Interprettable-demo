@@ -97,8 +97,11 @@ void TranslationSocket::parseTranslation( ofxLibwebsockets::Event& args) {
     string type     = splitted[1];
     string mesg     = splitted[2];
     
+    
     // check if already exist
     translated  * trans = getTranslatedForID(id);
+    
+
     
     if(trans) {
         

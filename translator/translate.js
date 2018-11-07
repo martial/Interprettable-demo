@@ -3,6 +3,7 @@ const translate = require('node-google-translate-skidz');
 const W3CWebSocket = require('websocket').w3cwebsocket;
 
 if (cluster.isMaster) {
+    
     console.log(`Master ${process.pid} is running`);
 
     for (let i = 0; i < 1; i++) {
