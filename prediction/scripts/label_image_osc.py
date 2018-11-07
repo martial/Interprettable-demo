@@ -112,9 +112,9 @@ def load_labels(label_file):
 
 if __name__ == "__main__":
   #Parameters by default
-  file_name = "tf_files/flower_photos/daisy/3475870145_685a19116d.jpg"
-  model_file = "tf_files/retrained_graph.pb"
-  label_file = "tf_files/retrained_labels.txt"
+  file_name = "../tf_files/flower_photos/daisy/3475870145_685a19116d.jpg"
+  model_file = "../tf_files/retrained_graph.pb"
+  label_file = "../tf_files/retrained_labels.txt"
   input_height = 224
   input_width = 224
   input_mean = 128
