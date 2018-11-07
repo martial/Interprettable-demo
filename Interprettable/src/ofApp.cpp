@@ -6,13 +6,13 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetCircleResolution(128);
     sceneManager.setup();
-    
     translationSocket.setup();
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    
     sceneManager.update();
 
 }
@@ -27,8 +27,6 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
-   // sceneManager.nextScene();
     
 }
 

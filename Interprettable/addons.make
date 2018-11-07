@@ -1,8 +1,8 @@
 ofxAnimatable
+ofxBox2d
 ofxFontStash2
 ofxLibwebsockets
+ofxMask
 ofxOpenCv
 ofxOsc
-ofxMask
-ofxThreadedImageLoader
 ofxTimer

@@ -9,6 +9,9 @@
 
 #include "ofMain.h"
 #include "AbstractScene.hpp"
+#include "ofxBox2d.h"
+#include "ofxFontStash2.h"
+#include "ofxOpenCv.h"
 
 class TranslationScene : public AbstractScene {
     
@@ -28,5 +31,20 @@ private:
     
     ofImage maskImage;
     ofxMask *translationMask;
+    
+    ofxBox2d                               box2d;   // the box2d world
+    vector   <shared_ptr<ofxBox2dRect> >   boxes;   // defalut box2d rects
+    vector <shared_ptr<ofxBox2dPolygon>>   polyShapes;
+
+    ofTrueTypeFont                          font;
+    ofxFontStash2::Style                    box2dStyle;
+    
+    
+    ofxCvColorImage          colorImg;
+    ofxCvGrayscaleImage     grayImage;
+    ofxCvContourFinder     contourFinder;
+    
+    ofJson languagesJson;
+    int currentLanguage;
 };
 

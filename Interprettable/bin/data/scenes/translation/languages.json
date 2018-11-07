@@ -1,0 +1,148 @@
+[
+	[
+		"Afrikaans",
+		["af-ZA"]
+	],
+
+	[
+		"Azərbaycanca",    ["az-AZ"]],
+
+	[
+		"Bahasa Indonesia",
+		["id-ID"]
+	],
+	[
+		"Bahasa Melayu",
+		["ms-MY"]
+	],
+	[
+		"Català",
+		["ca-ES"]
+	],
+
+	[
+		"Dansk",
+		["da-DK"]
+	],
+	[
+		"Deutsch",
+		["de-DE"]
+	],
+	[
+		"English",
+		["en-US", "United States"]
+	],
+	[
+		"Español",
+		["es-ES", "España"]
+	],
+	[
+		"Euskara",
+		["eu-ES"]
+	],
+	[
+		"Filipino",
+		["fil-PH"]
+	],
+	[
+		"Français",
+		["fr-FR"]
+	],
+	[
+		"Basa Jawa",
+		["jv-ID"]
+	],
+	[
+		"Galego",
+		["gl-ES"]
+	],
+
+	[
+		"Hrvatski",
+		["hr-HR"]
+	],
+	[
+		"IsiZulu",
+		["zu-ZA"]
+	],
+	[
+		"Íslenska",
+		["is-IS"]
+	],
+	[
+		"Italiano",
+		["it-IT", "Italia"],
+		["it-CH", "Svizzera"]
+	],
+
+
+	[
+		"Latviešu",
+		["lv-LV"]
+	],
+	[
+		"Lietuvių",
+		["lt-LT"]
+	],
+	
+	[
+		"Magyar",
+		["hu-HU"]
+	],
+
+	[
+		"Nederlands",
+		["nl-NL"]
+	],
+	
+	[
+		"Norsk bokmål",
+		["nb-NO"]
+	],
+	[
+		"Polski",
+		["pl-PL"]
+	],
+	[
+		"Português",
+		["pt-BR", "Brasil"],
+		["pt-PT", "Portugal"]
+	],
+	[
+		"Română",
+		["ro-RO"]
+	],
+	
+	[
+		"Slovenščina",
+		["sl-SI"]
+	],
+	[
+		"Basa Sunda",
+		["su-ID"]
+	],
+	[
+		"Slovenčina",
+		["sk-SK"]
+	],
+	[
+		"Suomi",
+		["fi-FI"]
+	],
+	[
+		"Svenska",
+		["sv-SE"]
+	],
+	[
+		"Kiswahili",
+		["sw-TZ", "Tanzania"],
+		["sw-KE", "Kenya"]
+	],
+	
+
+	[
+		"Türkçe",
+		["tr-TR"]
+	]
+	
+]
