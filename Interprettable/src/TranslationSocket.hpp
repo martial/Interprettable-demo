@@ -42,6 +42,7 @@ public:
 
     vector<translated> translations;
 
+    void changeOutputLang(string lang);
     
 private:
     

@@ -201,13 +201,12 @@ void TranslationScene::prepass() {
 
         }
         
-        // draw the ground
-        box2d.drawGround();
         
     }
     
     
-    
+    ofSetColor(255, 255);
+
     AbstractScene::draw();
     
     
@@ -242,9 +241,13 @@ void TranslationScene::mousePressed(int x, int y, int button) {
         bbox.x -= + bbox.width * .5;
         bbox.y -= - bbox.height * .5;
         bool isInside = bbox.inside( mouse );
-        if(isInside)
+        if(isInside) {
             currentLanguage = i;
-        
+            
+            string output = languagesJson[i][1][0];
+            ofApp * app = (ofApp*)ofGetAppPtr();
+            app->translationSocket.changeOutputLang(output);
+        }
     }
     
    

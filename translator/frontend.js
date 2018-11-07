@@ -5,6 +5,7 @@ var errors      = [];
 var SpeechRecognition = window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 var autoLangRecognition = false;
+var ouputLang = "en-US";
 
 recognition.lang = "fr-FR";
 recognition.continuous = true;
@@ -31,8 +32,8 @@ recognition.onresult = function(event) {
         var uniqueID = (new Date()).getTime();
 
         var input  = langs[select_language.selectedIndex][1];
-        var	output = langs[translate_language.selectedIndex][1];
-
+        var	output = ouputLang;
+        
 		var transcript = event.results[event.results.length-1][0].transcript;
 		console.log(event.results[event.results.length-1][0].confidence);
         
@@ -59,7 +60,7 @@ recognition.onresult = function(event) {
         
         }else{
             
-            ws.send(uniqueID+"|RAW|"+transcript+"|"+input[0]+"|"+output[0]);
+            ws.send(uniqueID+"|RAW|"+transcript+"|"+input[0]+"|"+output);
             console.log("from "+input+" to "+ output);
             updateField(transcript);
             
@@ -97,9 +98,18 @@ function resetVoiceRecog() {
 
 
 $('#select_language').on('change', function() {
+                         
+    console.log("Changing input lang to " + langs[this.value][1]);
     recognition.lang = langs[this.value][1];
     recognition.stop();
 })
+
+$('#translate_language').on('change', function() {
+                         
+     ouputLang = langs[this.value][1];
+     console.log("Changing output lang to " + ouputLang);
+
+ })
 
 $('#scenario_id').on('change', function() {
     ws.send(this.value+"|SCENARIO_CHANGE|NULL|NULL|NULL");
@@ -158,8 +168,15 @@ function createWebSocket(server) {
             
             if(type == "TRANS")
                 updateField("<p style='color:red;'>"+msg+"</p>");
+            
             if (type == "SCENARIO_DATA")
                 scenario_id.options[parseInt(id) + 1] = new Option(msg, parseInt(id) + 1);
+            
+            if (type == "OUTPUT") {
+                ouputLang = msg;
+                console.log("change ouput to " + ouputLang);
+            }
+            
         };
     
     } else {

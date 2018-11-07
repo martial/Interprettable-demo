@@ -138,6 +138,14 @@ void TranslationSocket::parseTranslation( ofxLibwebsockets::Event& args) {
     
 }
 
+void TranslationSocket::changeOutputLang(string lang) {
+    
+    string message = "0|OUTPUT|"+lang;
+    server.send( message );
+    
+}
+
+
 translated * TranslationSocket::getTranslatedForID(string uniqueID) {
     
     for( int i=0; i<translations.size(); i++) {

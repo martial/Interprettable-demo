@@ -1557,6 +1557,7 @@
 				DF02B18978B01652FC541409 /* IntroductionScene.hpp */,
 				134C164BF61A21BC904CD5AB /* ofxImgSizeUtils.h */,
 				E733D9E0B1C68F0F0B7D0074 /* TranslationSocket.hpp */,
+				1CB6287324290D5795CA8A35 /* TranslationSocket.cpp */,
 				D0F86930EB9F7CE5E4029745 /* ofxImgSizeUtils.cpp */,
 				D05376A912C455B110E3C81D /* VideoScene.hpp */,
 				44FA32B25FC9A274F06CBC0D /* TouchDrawManager.hpp */,
@@ -1577,7 +1578,6 @@
 				360902E4064645EC170D4E29 /* DescriptionScene.hpp */,
 				BB0B2A5DDA10C912F1E7EAED /* IntroductionScene.cpp */,
 				F1D7C62CEB435FDB35D91F27 /* TransitionManager.cpp */,
-				1CB6287324290D5795CA8A35 /* TranslationSocket.cpp */,
 				7EE4A8CE09525922FDD89489 /* VideoScene.cpp */,
 			);
 			path = src;
