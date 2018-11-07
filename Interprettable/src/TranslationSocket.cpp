@@ -11,7 +11,9 @@ void TranslationSocket::setup() {
     
     bVerbose = false;
     
+#ifndef __linux__
     addFakeContent();
+#endif
     
     ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
     options.port = 9092;
