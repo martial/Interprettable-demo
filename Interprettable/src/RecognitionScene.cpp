@@ -41,6 +41,9 @@ void RecognitionScene::setup() {
     
     resultPct.setDuration(0.4);
     
+    ofFile file("scenes/recognition/config.json");
+    file >> configJson;
+    
 }
 
 void RecognitionScene::init() {
@@ -173,7 +176,7 @@ void RecognitionScene::drawInvitationText() {
     ofPushMatrix();
     ofTranslate(1150, 800);
     ofRotateX(-180);
-    mom->fonts.drawColumn("Don't be shy, draw a moon, a house, an arrow, an ambulance.. ", invitationLabel, 0.0, 0.0, 500);
+    mom->fonts.drawColumn("Don't be shy, draw a moon, a house, an arrow, an ambulance, a baby bottle, a bed! ", invitationLabel, 0.0, 0.0, 500);
     ofPopMatrix();
     
     // draw results text
@@ -256,11 +259,22 @@ void RecognitionScene::drawResult() {
         }
     }
     
+    string translated = caption;
+    string description = "";
+    
+    if(caption != "rien" && caption.size() > 0) {
+        
+        ofJson jsonBlock = getConfigByLabel(caption);
+        translated = jsonBlock["translation"];
+        description = jsonBlock["description"];
+        
+    }
+
     // not sure why I need to flip this ?
     
     string label = "I can't find anything";
     if( caption != "rien")
-        label = "I see a " + caption + " !";
+        label = "I see a " + translated + " !";
     
     if( caption == "Not sure")
         label = "I'm not sure to recognize this.";
@@ -286,8 +300,7 @@ void RecognitionScene::drawResult() {
     ofRotateX(-180);
     mom->fonts.drawColumn(label, styleLabel, 0.0, 0.0, 500);
     
-    string tinyLabel = "Now we can engage conversation about whatever works...";
-    mom->fonts.drawColumn(tinyLabel, styleTinyLabel, 0.0, 80, 500);
+    mom->fonts.drawColumn(description, styleTinyLabel, 0.0, 80, 500);
 
     ofPopMatrix();
     
@@ -304,6 +317,23 @@ void RecognitionScene::switchResults() {
     
 
 }
+
+ofJson RecognitionScene::getConfigByLabel(string label) {
+    
+    
+    
+    for (int i=0; i<configJson.size(); i++) {
+        
+        if (configJson[i]["label"] == label)
+            return (configJson[i]);
+        
+    }
+    
+    
+    ofJson dummy;
+    return dummy;
+}
+
 
 
 void RecognitionScene::onClearButtonClickedEventHandler(ofEventArgs & e) {

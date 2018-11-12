@@ -1,0 +1,37 @@
+[
+  {
+    "translation": "arrow",
+    "label": "fleche",
+    "description": "Maybe we can engage topics such as growth."
+  },
+  {
+    "translation": "baby bottle",
+    "label": "biberon",
+    "description": "This can be a starting point to talk about food in general."
+  },
+  {
+    "translation": "ambulance",
+    "label": "ambulance",
+    "description": "Looks like we have an emergency here."
+  },
+  {
+    "translation": "bed",
+    "label": "lit",
+    "description": "Maybe we want to talk about sleep generally ?"
+  },
+  {
+    "translation": "moon",
+    "label": "lune",
+    "description": "Maybe we want to talk about sleep generally ?"
+  },
+  {
+    "translation": "house",
+    "label": "maison",
+    "description": "Let's talk about general issue and the place you live."
+  },
+  {
+    "translation": "mouth",
+    "label": "bouche",
+    "description": "This can be a starting point to talk about food in general."
+  }
+]

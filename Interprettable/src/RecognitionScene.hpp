@@ -36,7 +36,13 @@ public:
     
     void onClearButtonClickedEventHandler(ofEventArgs & e);
     
+    ofJson getConfigByLabel(string label);
+    
 private:
+    
+    
+    
+    ofJson configJson;
     
     string caption;
     ofImage backgroundImage;
