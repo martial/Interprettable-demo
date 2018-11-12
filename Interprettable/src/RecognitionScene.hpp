@@ -50,6 +50,8 @@ private:
     ofImage maskImage;
     ofxMask *drawingMask;
     
+    ofImage toolsImage;
+    
     TouchDrawManager touchDrawManager;
     InteractiveButton clearButton;
     

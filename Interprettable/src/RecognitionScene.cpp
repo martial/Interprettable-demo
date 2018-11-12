@@ -16,6 +16,7 @@ void RecognitionScene::setup() {
     
     setIntroductionImage("scenes/recognition/Barcelone13.png");
     backgroundImage.load("scenes/recognition/background.jpg");
+    toolsImage.load("scenes/recognition/tools.png");
     
     drawingMask = new ofxMask();
     drawingMask->allocate(ofGetWidth(), ofGetHeight(), ofxMask::LUMINANCE);
@@ -246,7 +247,7 @@ void RecognitionScene::drawResult() {
      
         imagesResult[i].draw(xPos, yPos);
         yPos +=  imagesResult[i].getHeight();
-                width = MAX(imagesResult[i].getWidth(), width);
+        width = MAX(imagesResult[i].getWidth(), width);
         
         cnt++;
 
@@ -259,10 +260,12 @@ void RecognitionScene::drawResult() {
         }
     }
     
+    toolsImage.draw(1150, 820);
+    
     string translated = caption;
     string description = "";
     
-    if(caption != "rien" && caption.size() > 0) {
+    if(caption != "rien" && caption != "Not sure" && caption.size() > 0) {
         
         ofJson jsonBlock = getConfigByLabel(caption);
         translated = jsonBlock["translation"];
