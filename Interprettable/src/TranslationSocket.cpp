@@ -11,9 +11,9 @@ void TranslationSocket::setup() {
     
     bVerbose = false;
     
-#ifndef __linux__
+//#ifndef __linux__
     addFakeContent();
-#endif
+//#endif
     
     ofxLibwebsockets::ServerOptions options = ofxLibwebsockets::defaultServerOptions();
     options.port = 9092;
@@ -34,6 +34,34 @@ void TranslationSocket::setup() {
 
 void TranslationSocket::addFakeContent() {
     
+    translated t;
+   
+    
+    t.trans = "Si il y a un probleme avec la lecture, il y a une autre solution. Vous pourrez la voir en cliquant !";
+    t.raw = "If there is also a problem in reading, we have another solution, see it on the next step!";
+    translations.push_back(t);
+    
+    t.trans = "Médecin et patient peuvent lire en temps réél la conversation";
+    t.raw = "Doctor and patient can read in real time the conversation";
+    translations.push_back(t);
+  
+    
+    t.trans = "Médecin et patient peuvent lire en temps réél la conversation";
+    t.raw = "Medic and patient can read in real time the conversation";
+    translations.push_back(t);
+    
+    
+   
+    
+    t.trans = "Sur la table, cet espace est une traduction en temps réél pour aider à la communication";
+    t.raw = "On the table the translations are projected in realtime to help people communicate";
+    translations.push_back(t);
+    
+    t.trans = "Bonjour ! Merci d'être ici";
+    t.raw = "Hi thank you for being here";
+    translations.push_back(t);
+    
+    /*
     for(int i=0; i<10; i++) {
         
         translated t;
@@ -43,6 +71,8 @@ void TranslationSocket::addFakeContent() {
         translations.push_back(t);
         
     }
+     
+     */
     
 }
 
