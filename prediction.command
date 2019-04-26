@@ -9,3 +9,8 @@ python2 -m scripts.label_image_osc \
     --image=tf_files/images.duckduckgo.png
 echo "Fin de la prédiction"
 exit 0
+
+
+python2 -m scripts/label_image_osc.py \
+--graph=tf_files/retrained_graph.pb\
+--image=tf_files/images.duckduckgo.png
